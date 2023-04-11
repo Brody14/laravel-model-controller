@@ -1,1 +1,11 @@
 @import '~bootstrap/scss/bootstrap';
+
+.card {
+    height: 200px;
+    width: 300px;
+
+    &_title {
+        font-size: 20px;
+    }
+
+}

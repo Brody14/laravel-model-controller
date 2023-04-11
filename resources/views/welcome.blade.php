@@ -19,21 +19,23 @@
 
     <main>
 
-        <section class="p-5">
+        <section class="py-5">
             <div class="container">
-                <div class="row gap-2">
+                <div class="row gap-3 justify-content-center">
                     @foreach($movies as $movie) 
-                    <div class="col-12 text-center">
-                        <div class="card p-2">
-                            <h1> {{ $movie->title }} </h1>
+                    <div class="col-4 text-center">
+                        <div class="card p-3 d-flex justify-content-center">
+                            <h1 class="card_title"> {{ $movie->title }} </h1>
                             @if ($movie->title != $movie->original_title)
 
-                                <h4> {{ $movie->original_title }} </h4>
+                                <p class="m-0">{{ $movie->original_title }}</p>
     
                             @endif
-                            <p class="m-0"> Nazionalit&agrave;: {{ $movie->nationality }} </p>
-                            <p class="m-0"> Data: {{ $movie->date }} </p>
-                            <p class="m-0"> Voto: {{ $movie->vote }} </p>
+                            <ul class="list-unstyled">
+                                <li>Nazionalit&agrave;: {{ $movie->nationality }}</li>
+                                <li>Data: {{ $movie->date }}</li>
+                                <li>Voto: {{ $movie->vote }} </li>
+                            </ul>
                         </div>
                     </div>
                     @endforeach
